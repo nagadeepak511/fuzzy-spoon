@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sorry</title>
+</head>
+<body>
+    <div id="container">
+        <div id="hero">
+            <img src="./broken_heart.png" alt="" id="heart_symbol">
+            <h1 id="quote1"><p>It</p> <p>breaks</p> <p>my heart</p></h1>
+        </div>
+        <div id="right">
+            <div id="mirrorContainer">
+                <video autoplay="true" id="videoElement"></video>
+                <h3>Sorry for making this cute face sad. Wish I see you normal again. I can't see you like this. </h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        let video = document.querySelector('#videoElement');
+        if(navigator.mediaDevices.getUserMedia){
+            navigator.mediaDevices.getUserMedia({video:true})
+            .then(function (stream){
+                video.srcObject = stream;
+            })
+            .catch(function (error){
+                alert("Something went wrong!", error)
+            })
+        } else {
+            alert("getUserMedia not supported")
+        }
+    </script>
+</body>
+</html>
