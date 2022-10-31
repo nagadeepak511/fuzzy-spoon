@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Nunito:wght@200&display=swap');
+
+body{
+    font-family: 'Fasthand', cursive;
+    font-family: 'Lilita One', cursive;
+    margin: 0;
+    
+}
+
+#container {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    /* max-width: 1000px; */
+    margin: auto;
+}
+
+#hero{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 78, 170);
+}
+
+#heart_symbol {
+    width: 70%;
+    max-width: 300px;
+}
+
+#right {
+    padding: 1rem;
+    background-color: cornflowerblue;
+}
+
+#mirrorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95%;
+    /* background-color: white; */
+    border-radius: 1rem;
+    overflow: hidden;
+    /* box-shadow: 0px 0px 0px 2px black; */
+    padding: 1rem;
+}
+
+#videoElement {
+    width: 100%;
+    background-color: lightslategray;
+    border-radius: 1rem;
+}
+
+h3 {
+    font-family: 'Nunito', cursive;
+    color: black;
+}
+
+#quote1 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 6px 4px black;
+}
+
+#quote1 > p {
+    margin: 0;
+}
+
+@media screen and (max-width: 800px){
+    #container {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+}
